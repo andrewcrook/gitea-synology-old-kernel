@@ -1,5 +1,5 @@
 # gitea-synology-old-kernel
-Gitea 1.26.2 Docker has a compatibility issue with git expecting a newer kernel sys-calls. Synology are notorious for using old kernels. 
+Gitea 1.26.2 Docker has a compatibility issue with git expecting a newer kernel sys-calls. Synology is notorious for using old kernels. 
 
 
 ```console
@@ -31,3 +31,13 @@ write(2, "error: unable to get random byte"..., 79error: unable to get random by
 ..
 ..
 ```
+
+## Solution
+- Copy working git binary across to new image.  *<< This Solution* 
+- Longterm solution use a Synology NAS for just storage only and run docker on a separate server
+- Use Synology virtual machine manager, *if* your model supports it,  run a newer version of linux with docker in a virtual machine 
+- Replace Synology NAS with something more open where you have control over the base OS.
+
+## FAQ
+- Why did you use inline-dockerfile in docker-compose over a dockerfile?
+At the time I was using Portainer its just easier to use stack templates i.e docker-compose files
