@@ -40,4 +40,5 @@ write(2, "error: unable to get random byte"..., 79error: unable to get random by
 
 ## FAQ
 - Why did you use inline-dockerfile in docker-compose over a dockerfile?
+
 At the time I was using Portainer its just easier to use stack templates i.e docker-compose files
