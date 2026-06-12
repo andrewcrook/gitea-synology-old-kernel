@@ -33,9 +33,9 @@ write(2, "error: unable to get random byte"..., 79error: unable to get random by
 ```
 
 ## Solution
-- Copy working git binary across to new image.  *<< This Solution* 
+- Copy working git binary across to new image.  ***<< This Solution***
 - Longterm solution use a Synology NAS for just storage only and run docker on a separate server
-- Use Synology virtual machine manager, *if* your model supports it,  run a newer version of linux with docker in a virtual machine 
+- Use Synology virtual machine manager, ***if*** your model supports it,  run a newer version of linux with docker in a virtual machine 
 - Replace Synology NAS with something more open where you have control over the base OS.
 
 ## FAQ
