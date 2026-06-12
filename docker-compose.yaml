@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  gitea-server:
+    build:
+      dockerfile_inline: |
+         FROM gitea/gitea:1.25.5 AS old
+         FROM gitea/gitea:1.26.2
+         COPY --from=old /usr/bin/git /usr/bin/git
+    container_name: gitea
+    network_mode: host
+    environment:
+      - USER_UID=1038
+      - USER_GID=65542
+      - TZ=Europe/London
+    ports:
+      - "3000:3000"
+    restart: always
+
+    volumes:
+      - /volume1/docker/gitea/:/data
